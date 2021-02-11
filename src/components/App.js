@@ -16,12 +16,15 @@ class App extends React.Component {
 
   selectedFilter = (word) => {
     this.setState({
-      filters: word
+      filters: {
+        ///...this.state.filters, type: word
+        type: word
+      }
     })
   }
 
   fetchReq = () => {
-    console.log('THIS IS PARAM!!!!!')
+    //console.log('THIS IS PARAM!!!!!')
     let url = '/api/pets'
     if(this.state.filters.type !== 'all') {
        url += `?type=${this.state.filters.type }`
