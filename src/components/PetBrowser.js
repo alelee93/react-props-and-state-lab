@@ -10,7 +10,7 @@ class PetBrowser extends React.Component {
     let myPets = this.props.pets
 
     myPets.forEach(renderPet => {
-      return <div className="ui cards"> <Pet pet = {renderPet}/> </div>
+      return <div className="ui cards"> <Pet pet = {renderPet} /> </div>
     })
 
     
